@@ -1,5 +1,8 @@
 package AnimalKingdom;
 
+import java.util.ArrayList;
+import java.util.spi.AbstractResourceBundleProvider;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,5 +27,25 @@ public class Main {
         Fish salmon = new Fish("Salmon", 1758, 12);
         Fish catfish = new Fish("Catfish", 1817, 13);
         Fish perch = new Fish("Perch", 1758, 14);
+
+        ArrayList<AbstractAnimal> animalArrayList = new ArrayList<AbstractAnimal>();
+
+        animalArrayList.add(panda);
+        animalArrayList.add(zebra);
+        animalArrayList.add(koala);
+        animalArrayList.add(sloth);
+        animalArrayList.add(armadillo);
+        animalArrayList.add(raccoon);
+        animalArrayList.add(bigfoot);
+        animalArrayList.add(pigeon);
+        animalArrayList.add(peacock);
+        animalArrayList.add(toucan);
+        animalArrayList.add(parrot);
+        animalArrayList.add(swan);
+        animalArrayList.add(salmon);
+        animalArrayList.add(catfish);
+        animalArrayList.add(perch);
+
+
     }
 }

@@ -29,7 +29,7 @@ public class Main {
 
         ArrayList<AbstractAnimal> animalArrayList = new ArrayList<AbstractAnimal>();
 
-        animalArrayList.add(panda);
+               animalArrayList.add(panda);
         animalArrayList.add(zebra);
         animalArrayList.add(koala);
         animalArrayList.add(sloth);
@@ -83,6 +83,12 @@ public class Main {
         animalArrayList.forEach(a -> {if (a.getYearDiscovered() == 1758) {
             System.out.println(a.toString());
         }});
+        System.out.println();
+
+        animalArrayList.forEach(a -> {
+            if (a.animalMovement().equals("walks: " + a.getName())) {
+                System.out.println(a.toString());
+            }});
 
 
 

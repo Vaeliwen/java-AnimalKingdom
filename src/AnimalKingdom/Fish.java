@@ -1,22 +1,31 @@
 package AnimalKingdom;
 
-public class Fish extends Animal {
+public class Fish extends AbstractAnimal {
 
     public Fish(String name, int yearDiscovered, int id){
-        this.name = name;
-        this.id = id;
-        this.yearDiscovered = yearDiscovered;
+        super(name, yearDiscovered, id);
     }
 
+    @Override
     public String animalReproduction() {
-        return name = " reproduces through the laying of eggs!";
+        return getName() + " reproduces through the laying of eggs!";
     }
 
+    @Override
     public String animalMovement() {
-        return name + " swims to move!";
+        return getName() + " swims to move!";
     }
 
+    @Override
     public String animalBreathing() {
-        return name + " uses their gills to breathe!";
+        return getName() + " uses their gills to breathe!";
+    }
+
+    @Override
+    public String toString() {
+        return "Fish{" +
+                "name='" + getName() + "\'" + ", " +
+                "discovered=" + getYearDiscovered() + ", " +
+                "id=" + getId() + "}";
     }
 }

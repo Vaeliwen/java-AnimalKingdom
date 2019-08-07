@@ -1,7 +1,6 @@
 package AnimalKingdom;
 
-import java.util.ArrayList;
-import java.util.spi.AbstractResourceBundleProvider;
+import java.util.*;
 
 public class Main {
 
@@ -45,6 +44,47 @@ public class Main {
         animalArrayList.add(salmon);
         animalArrayList.add(catfish);
         animalArrayList.add(perch);
+
+        System.out.println("*** TESTS ***");
+        System.out.println();
+
+        Collections.sort(animalArrayList, (o1, o2) -> o2.getYearDiscovered() - o1.getYearDiscovered());
+
+        animalArrayList.forEach(a -> System.out.println(a.toString()));
+        System.out.println();
+
+        Collections.sort(animalArrayList, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+
+        animalArrayList.forEach(a -> System.out.println(a.toString()));
+        System.out.println();
+
+        Collections.sort(animalArrayList, (o1, o2) -> o1.animalMovement().compareToIgnoreCase(o2.animalMovement()));
+
+        animalArrayList.forEach(a -> System.out.println(a.animalMovement()));
+        System.out.println();
+
+        animalArrayList.forEach(a -> {if (a.animalBreathing().equals("lungs: " + a.getName())) {
+            System.out.println(a.animalBreathing());
+        }});
+        System.out.println();
+
+        animalArrayList.forEach(a -> {if (a.animalBreathing().equals("lungs: " + a.getName()) && a.getYearDiscovered() == 1758) {
+            System.out.println(a.animalBreathing());
+        }});
+        System.out.println();
+
+        animalArrayList.forEach(a -> {if (a.animalBreathing().equals("lungs: " + a.getName()) && a.animalReproduction().equals("eggs: " + a.getName())) {
+            System.out.println(a.animalBreathing());
+        }});
+        System.out.println();
+
+        Collections.sort(animalArrayList, (o1, o2) -> o1.getName().compareTo(o2.getName()));
+
+        animalArrayList.forEach(a -> {if (a.getYearDiscovered() == 1758) {
+            System.out.println(a.toString());
+        }});
+
+
 
 
     }

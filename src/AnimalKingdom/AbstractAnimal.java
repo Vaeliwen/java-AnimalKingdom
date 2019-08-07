@@ -6,6 +6,7 @@ public abstract class AbstractAnimal {
     private String name;
     private int yearDiscovered;
 
+
      public AbstractAnimal(String name, int yearDiscovered, int id){
         this.name = name;
         this.id = id;

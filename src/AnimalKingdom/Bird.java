@@ -2,23 +2,25 @@ package AnimalKingdom;
 
 public class Bird extends AbstractAnimal {
 
+
+
     public Bird(String name, int yearDiscovered, int id){
         super(name, yearDiscovered, id);
     }
 
     @Override
     public String animalReproduction() {
-        return getName() + " reproduces through the laying of eggs!";
+        return "eggs: " + getName();
     }
 
     @Override
     public String animalMovement() {
-        return getName() + " flies to move!";
+        return "flies: " + getName();
     }
 
     @Override
     public String animalBreathing() {
-        return getName() + " uses their lungs to breathe!";
+        return "lungs: " + getName();
     }
 
     @Override
